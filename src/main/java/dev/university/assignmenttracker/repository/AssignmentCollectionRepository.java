@@ -30,6 +30,10 @@ public class AssignmentCollectionRepository {
         return assignmentList.stream().filter(a -> a.id().equals(id)).findFirst();
     }
 
+    public void create(Assignment assignment) {
+        assignmentList.add(assignment);
+    }
+
     public void save(Assignment assignment){
         assignmentList.removeIf(a -> a.id().equals(assignment.id()));
         assignmentList.add(assignment);
