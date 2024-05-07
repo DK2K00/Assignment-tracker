@@ -33,13 +33,7 @@ public class AssignmentController {
         return repository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Assignment Not Found"));
     }
 
-    //
-    @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping("")
-    public void create(@Valid @RequestBody Assignment assignment){
-        repository.create(assignment);
-    }
-
+    //CREATE
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("")
     public void save(@RequestBody Assignment assignment){
