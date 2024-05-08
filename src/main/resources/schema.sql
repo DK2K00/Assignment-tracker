@@ -10,4 +10,4 @@ CREATE TABLE IF NOT EXISTS Assignment (
 );
 
 INSERT INTO Assignment(title, subject, status, assignment_type, date_created)
-VALUES('Normalisation Quiz', 'DBMS', 'IN_PROGRESS', 'Quiz', CURRENT_TIMESTAMP)
+VALUES('Normalisation Quiz', 'DBMS', 'IN_PROGRESS', 'QUIZ', CURRENT_TIMESTAMP)

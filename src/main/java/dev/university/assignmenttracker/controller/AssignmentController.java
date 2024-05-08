@@ -1,7 +1,9 @@
 package dev.university.assignmenttracker.controller;
 
 import dev.university.assignmenttracker.model.Assignment;
+import dev.university.assignmenttracker.model.Status;
 import dev.university.assignmenttracker.repository.AssignmentCollectionRepository;
+import dev.university.assignmenttracker.repository.AssignmentRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,9 +18,9 @@ import java.util.Optional;
 @CrossOrigin
 public class AssignmentController {
 
-    private final AssignmentCollectionRepository repository;
+    private final AssignmentRepository repository;
 
-    public AssignmentController(AssignmentCollectionRepository repository) {
+    public AssignmentController(AssignmentRepository repository) {
         this.repository = repository;
     }
 
@@ -31,6 +33,16 @@ public class AssignmentController {
     @GetMapping("/{id}")
     public Assignment findById(@PathVariable Integer id){
         return repository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Assignment Not Found"));
+    }
+
+    @GetMapping("/filter/{keyword}")
+    public List<Assignment> findByTitle(@PathVariable String keyword){
+        return repository.findAllByTitleContains(keyword);
+    }
+
+    @GetMapping("/filter/status/{status}")
+    public List<Assignment> findByStatus(@PathVariable Status status){
+        return repository.listByStatus(status);
     }
 
     //CREATE
@@ -54,7 +66,7 @@ public class AssignmentController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Integer id){
-        repository.delete(id);
+        repository.deleteById(id);
     } 
 }
 
