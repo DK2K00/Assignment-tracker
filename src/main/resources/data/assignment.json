@@ -1,0 +1,38 @@
+[
+  {
+    "id": null,
+    "title": "Homework II",
+    "subject": "Operating Systems",
+    "status": "IN_PROGRESS",
+    "assignmentType": "NORMAL_ASSIGNMENT",
+    "dateCreated": "2024-03-01T00:00:00.000000",
+    "dueDate": null
+  },
+  {
+    "id": null,
+    "title": "Final Project Report",
+    "subject": "Software Engineering Principles",
+    "status": "COMPLETED",
+    "assignmentType": "REPORT",
+    "dateCreated": "2024-04-02T00:00:00.000000",
+    "dueDate": null
+  },
+  {
+    "id": null,
+    "title": "Assignment III",
+    "subject": "Java Programming",
+    "status": "IN_PROGRESS",
+    "assignmentType": "PROGRAMMING",
+    "dateCreated": "2024-03-11T00:00:00.000000",
+    "dueDate": null
+  },
+  {
+    "id": null,
+    "title": "Blockchain Quiz",
+    "subject": "Cyber Security",
+    "status": "COMPLETED",
+    "assignmentType": "QUIZ",
+    "dateCreated": "2024-04-21T00:00:00.000000",
+    "dueDate": null
+  }
+]

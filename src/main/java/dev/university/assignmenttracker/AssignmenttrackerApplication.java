@@ -21,12 +21,14 @@ public class AssignmenttrackerApplication {
 		SpringApplication.run(AssignmenttrackerApplication.class, args);
 	}
 
-	@Bean
+	/*@Bean
 	CommandLineRunner commandLineRunner(AssignmentRepository repository){
 		return args -> {
 			//Insert some data into database
 			Assignment assignment = new Assignment(null, "Neural Networks Assignment","AI", Status.COMPLETED, Type.PROGRAMMING, LocalDateTime.now(), null);
 			repository.save(assignment);
 		};
-	}
+	}*/
+
+
 }
