@@ -1,5 +1,6 @@
 package dev.university.assignmenttracker;
 
+import dev.university.assignmenttracker.config.AssignmentTrackerProperties;
 import dev.university.assignmenttracker.model.Assignment;
 import dev.university.assignmenttracker.model.Status;
 import dev.university.assignmenttracker.model.Type;
@@ -7,10 +8,12 @@ import dev.university.assignmenttracker.repository.AssignmentRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 
 import java.time.LocalDateTime;
 
+@EnableConfigurationProperties(AssignmentTrackerProperties.class)
 @SpringBootApplication
 public class AssignmenttrackerApplication {
 
